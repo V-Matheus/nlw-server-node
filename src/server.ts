@@ -11,7 +11,9 @@ const app = fastify();
 
 // SOAP, REST
 
-app.get('/', () => {
+app.post('/events', (request, reply) => {
+  console.log(request.body);
+
   return 'Hello NLW Unite';
 });
 
