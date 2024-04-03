@@ -16,3 +16,8 @@ Content-Type: application/json
   "name": "Victor Matheus",
   "email": "victormatheus508@gmail.com"
 }
+
+
+###
+
+GET http://localhost:3333/events/a3db7fec-7a73-49ae-a234-d2c7e9ab8e38
