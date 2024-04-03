@@ -6,3 +6,13 @@ Content-Type: application/json
   "details": "Um evento para quem é apaixonado por programação",
   "maximumAttendees": 100
 }
+
+###
+
+POST http://localhost:3333/events/013d1e0c-ce74-49c6-ac11-ab32386001b2/attendees
+Content-Type: application/json
+
+{
+  "name": "Victor Matheus",
+  "email": "victormatheus507@gmail.com"
+}

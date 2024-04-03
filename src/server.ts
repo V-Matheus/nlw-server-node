@@ -4,6 +4,7 @@ import {
   validatorCompiler,
 } from 'fastify-type-provider-zod';
 import { createEvent } from './routes/create-events';
+import { registerForEvent } from './routes/register-for-event';
 
 const app = fastify();
 
@@ -25,6 +26,7 @@ app.setSerializerCompiler(serializerCompiler);
 // 500x => Error do servidor (Um Error que está acontecendo independente do que está sendo enviado para o servidor)
 
 app.register(createEvent);
+app.register(registerForEvent);
 
 app.listen({ port: 3333 }).then(() => {
   console.log('HTTP Server Running');
