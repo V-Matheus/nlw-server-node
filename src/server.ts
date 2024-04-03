@@ -14,6 +14,7 @@ import { getEvent } from './routes/get-event';
 import { getAttendeeBadge } from './routes/get-attendees-badge';
 import { chekcIn } from './routes/check-in';
 import { getEventAttendees } from './routes/get-event-attendees';
+import { errorHandler } from './utils/erorr-handler';
 
 const app = fastify();
 
@@ -56,6 +57,8 @@ app.register(getEvent);
 app.register(getAttendeeBadge);
 app.register(chekcIn);
 app.register(getEventAttendees);
+
+app.setErrorHandler(errorHandler);
 
 app.listen({ port: 3333 }).then(() => {
   console.log('HTTP Server Running');
